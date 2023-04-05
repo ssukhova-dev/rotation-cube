@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Cube</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <section class="app">
+
+    <section class="cube_controls">
+
+      <p class="control_p">Speed: <span id="speed_value"></span></p>
+      <input class="range_control" id="speed_range_control" type="range" min="0" max="10" step="1">
+
+      <p class="control_p">Rotation:</p>
+      <p class="control_p">X-axis: <span id="x_angle_value"></span></p>
+      <input class="range_control" id="x_angle_range_control" type="range" min="0" max="360" step="1">
+
+      <p class="control_p">Y-axis: <span id="y_angle_value"></span></p>
+      <input class="range_control" id="y_angle_range_control" type="range" min="0" max="360" step="1">
+
+      <p class="control_p">Z-axis: <span id="z_angle_value"></span></p>
+      <input class="range_control" id="z_angle_range_control" type="range" min="0" max="360" step="1">
+
+
+      <p class="control_p">Color: </p>
+      <input type="color" id="cube_color_picker" value="#008000">
+
+      <p class="control_p">Transparency: <span id="transparency_value"></span></p>
+      <input class="range_control" id="transparency_range_control" type="range" min="0" max="10" step="1">
+
+      <p class="control_p">Animation scenario:</p>
+      <ul class="scenario_ul">
+        <li class="scenario_li">
+          <input type="radio" id="scenario1" name="scenario" value="scenario1" checked>
+          <label for="scenario1">Rotation</label>
+        </li>
+        <li class="scenario_li">
+          <input type="radio" id="scenario2" name="scenario" value="scenario2">
+          <label for="scenario">Reverse</label>
+        </li>
+      </ul>
+
+    </section>
+
+    <canvas class="cube_canvas"></canvas>
+
+  </section>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

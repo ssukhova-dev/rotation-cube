@@ -1,0 +1,42 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.control_p {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  margin-bottom: 4px;
+  margin-left: 2px;
+}
+
+
+.app {
+  display: flex;
+  flex-direction: row;
+}
+
+.cube_controls {
+  width: 400px;
+  height: 100vh;
+  margin: 20px;
+}
+
+.range_control {
+  width: 300px;
+}
+
+.cube_canvas {
+  width: 600px;
+  height: 500px;
+}
+
+.scenario_li {
+  list-style-type: none;
+  margin-bottom: 4px;
+}
+
+.scenario_ul {
+  margin-left: 0;
+  padding-left: 0;
+ }
