@@ -79,13 +79,7 @@ function animate(timeNow){
     rotateY(angle);
   }
 
-  for (let edge of edges){
-    ctx.beginPath();
-    ctx.moveTo(vertices[edge[0]][0], vertices[edge[0]][1]);
-    ctx.lineTo(vertices[edge[1]][0], vertices[edge[1]][1]);
-    ctx.stroke();
-  }
-
+  drawEdges();
   fillCubeSizes();
 
   requestAnimationFrame(animate);
@@ -95,6 +89,15 @@ function clearBackground(){
   ctx.globalAlpha = 1;
   ctx.fillRect(0, 0, w, h);
   ctx.globalAlpha = transparency;
+}
+
+function drawEdges(){
+  for (let edge of edges){
+    ctx.beginPath();
+    ctx.moveTo(vertices[edge[0]][0], vertices[edge[0]][1]);
+    ctx.lineTo(vertices[edge[1]][0], vertices[edge[1]][1]);
+    ctx.stroke();
+  }
 }
 
 function fillCubeSizes(){
