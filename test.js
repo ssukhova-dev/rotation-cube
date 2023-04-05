@@ -162,3 +162,127 @@ describe("rotateZ", function () {
 });
 
 
+describe("MoveX", function () {
+
+    it("движение вдоль оси X", function () {
+
+        cx = 300;
+        cy = 250;
+        cz = 100;
+
+        vertices = [
+            [cx - size, cy - size, cz - size],
+            [cx + size, cy - size, cz - size],
+            [cx + size, cy + size, cz - size],
+            [cx - size, cy + size, cz - size],
+            [cx - size, cy - size, cz + size],
+            [cx + size, cy - size, cz + size],
+            [cx + size, cy + size, cz + size],
+            [cx - size, cy + size, cz + size],
+        ];
+
+        fovAngleX = 0;
+        fovAngleY = 0;
+        fovAngleZ = 0;
+
+        direction = 1;
+
+        MoveX(10);
+
+        assert.equal(vertices[0][0], 226.66666666666669);
+        assert.equal(vertices[0][1], 166.66666666666669);
+        assert.equal(vertices[0][2], 16.66666666666667);
+
+        assert.equal(direction, 1);
+    });
+
+    it("движение вдоль оси X, изменеие направления", function () {
+
+        cx = 300;
+        cy = 250;
+        cz = 100;
+
+        vertices = [
+            [cx - size, cy - size, cz - size],
+            [cx + size, cy - size, cz - size],
+            [cx + size, cy + size, cz - size],
+            [cx - size, cy + size, cz - size],
+            [cx - size, cy - size, cz + size],
+            [cx + size, cy - size, cz + size],
+            [cx + size, cy + size, cz + size],
+            [cx - size, cy + size, cz + size],
+        ];
+
+        fovAngleX = 0;
+        fovAngleY = 0;
+        fovAngleZ = 0;
+
+        direction = 1;
+
+        MoveX(150);
+
+        assert.equal(direction, -1);
+    });
+
+    it("движение вдоль оси X в обратную сторону", function () {
+
+        cx = 300;
+        cy = 250;
+        cz = 100;
+
+        vertices = [
+            [cx - size, cy - size, cz - size],
+            [cx + size, cy - size, cz - size],
+            [cx + size, cy + size, cz - size],
+            [cx - size, cy + size, cz - size],
+            [cx - size, cy - size, cz + size],
+            [cx + size, cy - size, cz + size],
+            [cx + size, cy + size, cz + size],
+            [cx - size, cy + size, cz + size],
+        ];
+
+        fovAngleX = 0;
+        fovAngleY = 0;
+        fovAngleZ = 0;
+
+        direction = -1;
+
+        MoveX(10);
+
+        assert.equal(vertices[1][0], 373.3333333333333);
+        assert.equal(vertices[1][1], 166.66666666666669);
+        assert.equal(vertices[1][2], 16.66666666666667);
+
+        assert.equal(direction, -1);
+    });
+
+    it("движение вдоль оси X в обратную сторону, изменеие направления", function () {
+
+        cx = 300;
+        cy = 250;
+        cz = 100;
+
+        vertices = [
+            [cx - size, cy - size, cz - size],
+            [cx + size, cy - size, cz - size],
+            [cx + size, cy + size, cz - size],
+            [cx - size, cy + size, cz - size],
+            [cx - size, cy - size, cz + size],
+            [cx + size, cy - size, cz + size],
+            [cx + size, cy + size, cz + size],
+            [cx - size, cy + size, cz + size],
+        ];
+
+        fovAngleX = 0;
+        fovAngleY = 0;
+        fovAngleZ = 0;
+
+        direction = -1;
+
+        MoveX(150);
+
+        assert.equal(direction, 1);
+    });
+
+});
+
